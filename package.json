@@ -1,7 +1,21 @@
 {
   "name": "template",
   "version": "1.0.0",
-  "dependencies": {
-    "riot": "^4.6.5"
+  "scripts": {
+    "start": "webpack-dev-server --inline --watch --hot --colors -d --port 3000"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@riotjs/compiler": "^4.5.1",
+    "@riotjs/hot-reload": "^4.0.0",
+    "@riotjs/webpack-loader": "^4.0.1",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.0.6",
+    "riot": "^4.6.5",
+    "riotjs-loader": "^4.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
   }
 }
