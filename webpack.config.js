@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+    mode: 'development',
     entry: './src/static/index.js',
     output: {
         path: path.resolve(__dirname, 'src/static'),
@@ -20,16 +21,14 @@ module.exports = {
                 }]
             },
             {
-                test: /\.js$/,
+                test: /\.ts$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
-                }
+                use: 'ts-loader'
             }
         ]
+    },
+    resolve: {
+        extensions: ['.ts', '.js', '.riot']
     },
     devServer: {
         contentBase: './src/static'
